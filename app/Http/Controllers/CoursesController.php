@@ -1,6 +1,6 @@
 <?php namespace App\Http\Controllers;
 
-use Illuminate\Support\Facades\Crypt;
+//use Illuminate\Support\Facades\Crypt;
 use Illuminate\Http\Request;
 use App\Course;
 use App\Period;
@@ -25,20 +25,20 @@ class CoursesController extends Controller
 		$listcourses = [];
 
 		foreach ($courses as $course) {
-			//dd($course);
-			
-			$listcourses[Crypt::encryptString($course->id)->save()] = $course->name;
-			
-			$course->periods = Period::query()->where("course_id", $course->id)->get();
-		}
-
-		/*
-		foreach ($courses as $course) {
 			$listcourses[encrypt($course->id)] = $course->name;
 			$course->periods = Period::where("course_id", $course->id)->get();
 		}
-		*/
-		
+
+		/*
+		//Declaração conforme Laravel 8
+		foreach ($courses as $course) {
+			dd($course);
+			
+			$listcourses[Crypt::encryptString($course->id)] = $course->name;
+			
+			$course->periods = Period::query()->where("course_id", $course->id)->get();
+		}
+		*/		
 
 		return view("social.courses", [
 			"courses" => $courses,

@@ -45,16 +45,16 @@
 			<div class="block">
 				<!--inicio da listagem de cursos -->
 				@forelse( $courses as $course )
-				<div class="panel panel-default data" key="{{ Crypt::encryptString($course->id)->save() }}" >
+				<div class="panel panel-default data" key="{{ encrypt($course->id) }}" >
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-md-10 col-xs-10">
-								<span><b><a class="course-edit click" key="{{ Crypt::encryptString($course->id)->save() }}">{{ $course->modality ." ".$course->name }}</a></b></span>
+								<span><b><a class="course-edit click" key="{{ encrypt($course->id) }}">{{ $course->modality ." ".$course->name }}</a></b></span>
 							</div>
 							<div class="col-md-2 col-xs-2 text-right">
 								<i class="fa fa-gears icon-default click" data-toggle="dropdown" aria-expanded="false"></i>
 								<ul class="dropdown-menu" role="menu">
-									<li><a class="course-edit click" key="{{ Crypt::encryptString($course->id)->save() }}"><i class="fa fa-edit text-info"></i> Editar</a></li>
+									<li><a class="course-edit click" key="{{ encrypt($course->id) }}"><i class="fa fa-edit text-info"></i> Editar</a></li>
 									<li><a class="trash click"><i class="fa fa-trash text-danger"></i> Deletar</a></li>
 								</ul>
 							</div>
