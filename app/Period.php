@@ -1,6 +1,8 @@
 <?php namespace App;
 
-class Period extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+
+class Period extends Model
 {
 	/**
 	 * The attributes that are mass assignable.
@@ -24,7 +26,7 @@ class Period extends \Illuminate\Database\Eloquent\Model
 	];
 
 	protected $casts = [
-		'id' => null,
+		'id' => 'array',
 	];
 
 	public function disciplines()

@@ -1,6 +1,8 @@
 <?php namespace App;
 
-class State extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+
+class State extends Model
 {
 	/**
 	 * The attributes that are mass assignable.

@@ -1,6 +1,8 @@
 <?php namespace App;
 
-class Block extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+
+class Block extends Model
 {
 	protected $fillable = [];
 }

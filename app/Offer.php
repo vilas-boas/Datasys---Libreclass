@@ -1,8 +1,9 @@
 <?php namespace App;
 
 use DB;
+use Illuminate\Database\Eloquent\Model;
 
-class Offer extends \Illuminate\Database\Eloquent\Model
+class Offer extends Model
 {
 	/**
 	 * The attributes that are mass assignable.
@@ -35,7 +36,7 @@ class Offer extends \Illuminate\Database\Eloquent\Model
 	];
 
 	protected $casts = [
-		'id' => null,
+		'id' => 'array',
 	];
 
 	public function setMaxlessonsTimeAttribute($value)

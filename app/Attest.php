@@ -1,6 +1,8 @@
 <?php namespace App;
 
-class Attest extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+
+class Attest extends Model
 {
 	/**
 	 * The attributes that are mass assignable.

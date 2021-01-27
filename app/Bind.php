@@ -1,6 +1,7 @@
 <?php namespace App;
 
-class Bind extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+class Bind extends Model
 {
 	/**
 	 * The attributes that are mass assignable.

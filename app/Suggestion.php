@@ -1,6 +1,8 @@
 <?php namespace App;
 
-class Suggestion extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+
+class Suggestion extends Model
 {
 	/**
 	 * The attributes that are mass assignable.

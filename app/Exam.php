@@ -1,6 +1,7 @@
 <?php namespace App;
 
-class Exam extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+class Exam extends Model
 {
 	/**
 	 * The attributes that are mass assignable.
@@ -29,7 +30,7 @@ class Exam extends \Illuminate\Database\Eloquent\Model
 	];
 
 	protected $casts = [
-		'id' => null,
+		'id' => 'array',
 	];
 
 	public function setWeightAttribute($value)
