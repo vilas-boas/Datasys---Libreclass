@@ -82,8 +82,7 @@ Uma vez que o software está perfeitamente instalado, acesse o seu diretório e 
 
 ###### 3) Copiar a string, a mesma será utilizada para criar o usuário no banco de dados;
 
-    >  $2y$10$Azi/NDbx8WrjAsq0q9VMNeRKtUzoE4QRZOqXu/nQWsqocFXVKOQhu
-    $2y$10$iUfXTF9M0RlyPPwKnJeK1.M23q.lusKp/QW2H4PLFmoVdJ04LQ5q.
+    >  $2y$10$tJBmU3RkGHn2TVEYzlu08.rrVJXjScffWHODelcffjHdLWwtFlyS.
 
 ###### 4) Abrir o banco de dados pelo terminal:
 
@@ -95,7 +94,7 @@ Uma vez que o software está perfeitamente instalado, acesse o seu diretório e 
 
 ###### 6) Criar o usuário instituição (type = I) utilizando a string copiada no passo 3 como password:
 
-    mysql> INSERT INTO `Users` (`email`, `password`, `name`, `type`, `gender`, `birthdate`, `uee`, `course`, `formation`, `cadastre`, `idCity`, `street`, `photo`, `enrollment`, `created_at`, `updated_at`) VALUES ('meuemail@email.com', '$2y$10$Azi/NDbx8WrjAsq0q9VMNeRKtUzoE4QRZOqXu/nQWsqocFXVKOQhu', 'Nome da Instituição', 'I', NULL, NULL, NULL, NULL, '0', 'N', NULL, NULL, '/images/user-photo-default.jpg', NULL, NULL, NULL);
+    mysql> INSERT INTO `users` (`email`, `password`, `name`, `type`, `gender`, `birthdate`, `uee`, `course`, `formation`, `cadastre`, `city_id`, `street`, `photo`, `enrollment`, `created_at`, `updated_at`) VALUES ('meuemail@email.com', '$2y$10$tJBmU3RkGHn2TVEYzlu08.rrVJXjScffWHODelcffjHdLWwtFlyS.', 'Nome da Instituição', 'I', NULL, NULL, NULL, NULL, '0', 'N', NULL, NULL, '/images/user-photo-default.jpg', NULL, NULL, NULL);
 
 Neste ponto você terá um usuário do tipo instituição. Poderá realizar login com o email `meuemail@email.com` e a senha `1234`.
 
