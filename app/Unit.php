@@ -1,8 +1,9 @@
 <?php namespace App;
 
 use App\Attend;
+use Illuminate\Database\Eloquent\Model;
 
-class Unit extends \Illuminate\Database\Eloquent\Model
+class Unit extends Model
 {
 	protected $fillable = [
 		'offer_id',
@@ -23,7 +24,7 @@ class Unit extends \Illuminate\Database\Eloquent\Model
 	];
 
 	protected $casts = [
-		'id' => null,
+		'id' => 'array',
 	];
 
 	public function setValueAttribute($value)

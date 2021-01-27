@@ -1,8 +1,9 @@
 <?php namespace App;
 
 use App\Frequency;
+use Illuminate\Database\Eloquent\Model;
 
-class Attend extends \Illuminate\Database\Eloquent\Model
+class Attend extends Model
 {
 	/**
 	 * The attributes that are mass assignable.
@@ -25,7 +26,7 @@ class Attend extends \Illuminate\Database\Eloquent\Model
 	];
 
 	protected $casts = [
-		'id' => null,
+		'id' => 'array',
 	];
 
 
