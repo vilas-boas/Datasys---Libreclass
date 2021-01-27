@@ -1,6 +1,8 @@
 <?php namespace App;
 
-class Building extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+
+class Building extends Model
 {
 	protected $fillable = [];
 }

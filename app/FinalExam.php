@@ -1,6 +1,8 @@
 <?php namespace App;
 
-class FinalExam extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+
+class FinalExam extends Model
 {
 	/**
 	 * The attributes that are mass assignable.
