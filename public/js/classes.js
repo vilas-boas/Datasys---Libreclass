@@ -40,21 +40,21 @@ $(function() {
   $(".group").click(function(){
     var classe = $(this).closest(".data").attr("key");
 
-    // $.getJSON("/classes/info", {
-    //   "classe": classe
-    // }, function(data){
-    //   $("#formEditClass input[name='classId']").val(classe);
-    //   $("#formEditClass input[name='class']").val(data.name);
+    $.getJSON("/classes/info", {
+      "classe": classe
+    }, function(data){
+      $("#formEditClass input[name='classId']").val(classe);
+      $("#formEditClass input[name='class']").val(data.name);
 
-    //   $("#modalEditClass .EditClass-list-disciplines").load("classes/listdisciplines", {
-    //     "period_id": data.period_idCrypt,
-    //   "classe_id": classe,
-    //     "flag": 1
-    //   }, function(){
-    //   });
+      $("#modalEditClass .EditClass-list-disciplines").load("classes/listdisciplines", {
+        "period_id": data.period_idCrypt,
+      "classe_id": classe,
+        "flag": 1
+      }, function(){
+      });
 
-    //   $("#modalEditClass").modal();
-    // });
+      $("#modalEditClass").modal();
+    });
 
     window.location.href = "/classes/group/" + classe;
   });
