@@ -141,6 +141,7 @@ class ClassesController extends Controller
 		$class = new Classe;
 		$class->period_id = decrypt(request()->get("period"));
 		$class->name = request()->get("name");
+		$class->school_year = request()->get("school_year");
 		$class->class = request()->get("class");
 		$class->status = 'E';
 		$class->save();
