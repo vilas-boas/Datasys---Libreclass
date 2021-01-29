@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Http\Middleware;
-use Illuminate\Support\Str;
+
 use Closure;
+use Illuminate\Support\Str;
 use Log;
 
 class ApplicationStart
@@ -17,7 +18,7 @@ class ApplicationStart
 		$all = $request->all();
 
 		if (isset($all['photo'])) {
-			$all['photo'] = str_limit($all['photo']);
+			$all['photo'] = Str::limit($all['photo']);
 		}
 		$q = Str::start($request->path(), '/');
 		unset($all['password']);
