@@ -1,8 +1,9 @@
 <?php namespace App;
 
 use Jenssegers\Mongodb\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Model;
 
-class Lesson extends \Illuminate\Database\Eloquent\Model
+class Lesson extends Model
 {
 	use SoftDeletes;
 
@@ -42,7 +43,7 @@ class Lesson extends \Illuminate\Database\Eloquent\Model
 	];
 
 	protected $casts = [
-		'id' => null,
+		'id' => 'array',
 	];
 
 	public function setEstimatedTimeAttribute($value)

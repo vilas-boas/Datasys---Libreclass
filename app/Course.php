@@ -1,6 +1,8 @@
 <?php namespace App;
 
-class Course extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+
+class Course extends Model
 {
 	/**
 	 * The attributes that are mass assignable.
@@ -29,7 +31,7 @@ class Course extends \Illuminate\Database\Eloquent\Model
 	];
 
 	protected $casts = [
-		'id' => null,
+		'id' => 'array',
 	];
 
 	public function setNameAttribute($value)

@@ -1,6 +1,8 @@
 <?php namespace App;
 
-class ExamsValue extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+
+class ExamsValue extends Model
 {
 	/**
 	 * The attributes that are mass assignable.

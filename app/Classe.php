@@ -1,6 +1,7 @@
 <?php namespace App;
 
-class Classe extends \Illuminate\Database\Eloquent\Model
+use Illuminate\Database\Eloquent\Model;
+class Classe extends Model
 {
 	
 	public $table = 'classes';
@@ -26,7 +27,7 @@ class Classe extends \Illuminate\Database\Eloquent\Model
 	];
 
 	protected $casts = [
-		'id' => null,
+		'id' => 'array',
 	];
 
 	public function period()

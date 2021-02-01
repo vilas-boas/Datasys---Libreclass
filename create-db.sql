@@ -72,7 +72,7 @@ CREATE TABLE `classes` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
   `period_id` int(11) unsigned NOT NULL COMMENT 'periodo da turma',
   `name` varchar(50) DEFAULT NULL,
-  `school_year` int(11) DEFAULT '2019' COMMENT 'Ano letivo',
+  `school_year` int(11) NOT NULL COMMENT 'Ano letivo',
   `class` varchar(50) DEFAULT NULL,
   `status` char(1) NOT NULL DEFAULT 'E',
   `created_at` timestamp NULL DEFAULT NULL,

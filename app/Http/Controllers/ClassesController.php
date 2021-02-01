@@ -1,14 +1,15 @@
 <?php namespace App\Http\Controllers;
 
-use Exception;
-use DB;
-use App\Course;
-use App\Period;
-use App\Offer;
-use App\Discipline;
-use App\Classe;
-use App\Unit;
 use App\Attend;
+use App\Classe;
+use App\Course;
+use App\Discipline;
+use App\Offer;
+use App\Period;
+use App\Unit;
+use DB;
+use Exception;
+use Illuminate\Support\Arr;
 
 class ClassesController extends Controller
 {
@@ -51,11 +52,11 @@ class ClassesController extends Controller
 			}
 		}
 
-		$atual_classes = array_where($list_classes, function($classe, $key) use ($year) {
+		$atual_classes = Arr::where($list_classes, function($classe, $key) use ($year) {
 			return $classe->school_year == $year;
 		});
 
-		$previous_classes = array_where($list_classes, function($classe, $key) use ($year) {
+		$previous_classes = Arr::where($list_classes, function($classe, $key) use ($year) {
 			return $classe->school_year == $year-1;
 		});
 
@@ -140,6 +141,7 @@ class ClassesController extends Controller
 		$class = new Classe;
 		$class->period_id = decrypt(request()->get("period"));
 		$class->name = request()->get("name");
+		$class->school_year = request()->get("school_year");
 		$class->class = request()->get("class");
 		$class->status = 'E';
 		$class->save();
