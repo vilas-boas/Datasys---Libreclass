@@ -23,6 +23,19 @@ Habilite os módulos necessários:
     $ sudo a2enmod rewrite
     $ sudo service apache2 restart
 
+#### Instalação do pacote libssl1.0-dev
+
+Esse pacote é necessário para a criação de relatórios em PDF.
+
+Edite o arquivo em `/etc/apt/sources.list` e adicione ao fim do mesmo:
+
+    deb http://security.ubuntu.com/ubuntu bionic-security main
+
+Então execute:
+
+    sudo apt update && apt-cache policy libssl1.0-dev
+    sudo apt-get install libssl1.0-dev
+
 #### Configuração do arquivo `.env.php`
 
 É necessário criar o arquivo `.env.php` de acordo com o arquivo `.env.php.example`, na raiz do projeto, com as informações para conexão ao banco de dados MySQL e configurações para envio de email. Este passo deve ser executado antes de instalar as dependências do projeto com o composer. Exemplo:
