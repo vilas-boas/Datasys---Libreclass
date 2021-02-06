@@ -16,3 +16,4 @@ yarn-error.log
 .phpunit.result.cache
 /tmp
 composer.lock
+package-lock.json
